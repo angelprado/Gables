@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical"
+    tools:context="com.grabriel.aprado.gables.ItemDetailFragment" >
+
+    <TextView
+        android:id="@+id/item_detail"
+        style="?android:attr/textAppearanceSearchResultSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="La Piscina Veneciana es una piscina histórica ubicada en Coral Gables, Florida. La piscina se encuentra inscrita en el Registro Nacional de Lugares Históricos desde el 20 de agosto de 1981."
+        android:padding="8dp"
+        android:textIsSelectable="true"/>
+
+    <TextView
+        android:id="@+id/direccion"
+        style="?android:attr/textAppearanceSearchResultSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="Direccion : 2701 De Soto Blvd, Coral Gables, FL 33134"
+        android:textIsSelectable="true"/>
+
+
+    <TextView
+        android:id="@+id/Inauguración"
+        style="?android:attr/textAppearanceSmallPopupMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="Inauguración: 1924"
+        android:textIsSelectable="true"/>
+    <TextView
+        android:id="@+id/Superficie"
+        android:text="Superficie: 4 acres"
+        style="?android:attr/textAppearanceSmallPopupMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:textIsSelectable="true"/>
+    <TextView
+        android:text="Horario: Hoy abierto · 11–18:30"
+        android:id="@+id/Horario"
+        style="?android:attr/textAppearanceSmallPopupMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:textIsSelectable="true"/>
+    <TextView
+        android:text="Teléfono: (305) 460-5306"
+        android:id="@+id/Teléfono"
+        style="?android:attr/textAppearanceSmallPopupMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:textIsSelectable="true"/>
+    <TextView
+        android:text="Arquitecto: Phineas Paist"
+        android:id="@+id/Arquitecto"
+        style="?android:attr/textAppearanceSmallPopupMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:textIsSelectable="true"/>
+    <RatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="false"
+        android:paddingBottom="8dp"
+        android:stepSize="10"
+        android:paddingTop="8dp"
+        android:progressTint="#FDDB39"
+        android:rating="3.5"
+        android:secondaryProgressTint="#FDDB39" />
+
+
+</LinearLayout>
+
+
+
+

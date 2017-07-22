@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.grabriel.aprado.gables.Fragments.Deatailfragmen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_weight="1"
+        android:text="name"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_marginRight="@dimen/text_margin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imagen" />
+
+    <TextView
+        android:text="descrition"
+        android:id="@+id/descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_below="@+id/name" />
+    <RatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descripcion"
+        android:isIndicator="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:progressTint="#FDDB39"
+        android:rating="3"
+        android:secondaryProgressTint="#FDDB39" />
+    <!--<RatingBar-->
+    <!--android:id="@+id/ratingBar"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/descripcion"-->
+    <!--android:numStars="5"-->
+    <!--android:transformPivotX="0dp"-->
+    <!--android:scaleX="0.5"-->
+    <!--android:scaleY="0.5" />-->
+</RelativeLayout>
+
+</FrameLayout>
