@@ -93,6 +93,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
+        Button Skip = (Button)findViewById(R.id.crear);
+        Skip.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(i);
+
+            }
+        });
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override

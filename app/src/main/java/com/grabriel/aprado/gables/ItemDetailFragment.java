@@ -37,6 +37,7 @@ public class ItemDetailFragment extends Fragment {
     String mansage4;
     String mansage5;
     String mansage6;
+    String category;
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
@@ -60,6 +61,7 @@ public class ItemDetailFragment extends Fragment {
             mansage4 = (getArguments().getString("direc"));
             mansage5 = (getArguments().getString("horario"));
             mansage6 = (getArguments().getString("tlfn"));
+            category = (getArguments().getString("category"));
 
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
@@ -78,7 +80,7 @@ public class ItemDetailFragment extends Fragment {
 //                ImageView imageView = new ImageView(getActivity());
                 Glide
                         .with(getActivity())
-                        .load(mansage3.trim().toString())
+                        .load(mansage3.trim())
 //                        .override(310, 150)
                         .centerCrop()
                         .priority(Priority.IMMEDIATE)
@@ -100,6 +102,8 @@ public class ItemDetailFragment extends Fragment {
 //        if (mItem != null) {
 //            ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.getName());
 //        }
+
+
         TextView mg = (TextView)rootView.findViewById(R.id.item_detail);
         TextView direc = (TextView)rootView.findViewById(R.id.direccion);
         TextView horario = (TextView)rootView.findViewById(R.id.Horario);

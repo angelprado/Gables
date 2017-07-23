@@ -3,17 +3,20 @@ package com.grabriel.aprado.gables.Activitys;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.grabriel.aprado.gables.CategoryItem;
 import com.grabriel.aprado.gables.Fragments.FutureItemFragment;
 import com.grabriel.aprado.gables.FutureItem;
+import com.grabriel.aprado.gables.ItemCategoryFragment;
 import com.grabriel.aprado.gables.R;
 
-public class MainActivity extends AppCompatActivity implements FutureItemFragment.OnListFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements FutureItemFragment.OnListFragmentInteractionListener,ItemCategoryFragment.OnListFragmentInteractionListener{
 
     private TextView mTextMessage;
 
@@ -32,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements FutureItemFragmen
                     ft.commit();
                     return true;
                 case R.id.navigation_dashboard:
+                    Fragment fragment = new ItemCategoryFragment();
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.content,fragment);
+                    fragmentTransaction.commit();
                     return true;
                 case R.id.navigation_notifications:
                     return true;
@@ -55,6 +62,11 @@ public class MainActivity extends AppCompatActivity implements FutureItemFragmen
 
     @Override
     public void onListFragmentInteraction(FutureItem item) {
+
+    }
+
+    @Override
+    public void onListFragmentInteraction(CategoryItem item) {
 
     }
 }
